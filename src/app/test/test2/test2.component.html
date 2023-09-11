@@ -1,0 +1,13 @@
+<p>test2 works!</p>
+<div class="menu-item-info-box">
+    <span class="menu-item-info-box-icon">
+      <img [src]="items.imagePath">
+    </span>
+
+    <div class="menu-item-info-box-content">
+      <span class="menu-item-info-box-text">{{items.name}}</span>
+      <span class="menu-item-info-box-detail">{{items.description}}</span>
+      <span class="menu-item-info-box-price">{{items.price | currency: 'BRL': true}}</span>
+      <a class=""><i class="fa fa-plus-circle"></i> Add</a>
+    </div>
+</div>

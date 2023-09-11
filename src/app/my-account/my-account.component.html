@@ -1,0 +1,86 @@
+<div class="container mt-5">
+  <div><h1>Account Details</h1></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between flex-sm-column flex-md-row w-100">
+            <h6>Account Details</h6>
+          </div>
+          <div class="card-body ">
+            <form [formGroup]="angForm">
+
+              <div class="row" *ngFor="let user of user">
+                <div class="form-group col-sm-12">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="">First and last name</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="fname" name="fname" id="fname" [(ngModel)]="this.user.f_name">
+                    <input type="text" class="form-control" formControlName="lname" name="lname" id="lname" [(ngModel)]="this.user.l_name">
+                  </div>
+                </div>
+  
+                <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="">Email</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="email" [(ngModel)]="this.user.email" name="email" id="email">
+                    
+                  </div>
+                </div>
+  
+                <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                  
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="">username</span>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="this.user.username" formControlName="username" name="username" id="username">
+                    
+                  </div>
+                </div>
+  
+                <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id=""> Phone</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="phone" name="phone" id="phone" [(ngModel)]="this.user.phone">
+                  </div>
+                </div>
+
+             
+
+               
+
+                <div class="form-group col-sm-12 col-md-6 col-lg-6">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="">Address</span>
+                    </div>
+                    <input type="text" class="form-control" formControlName="address" name="address" id="address" [(ngModel)]="this.user.address">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between w-100 flex-row my-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Password</span>
+                  </div>
+                  <input type="password" class="form-control">
+                  <hr>
+                 </div>
+  
+                <div class="col-sm-12">
+                <button class="btn btn-danger">Edit</button>
+                </div>
+              </div>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>

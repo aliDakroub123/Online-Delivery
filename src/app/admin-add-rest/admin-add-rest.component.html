@@ -1,0 +1,132 @@
+<div class="container" style="margin-left: 255px;margin-top: 120px;">
+    <div class="row">
+      <div class="col-sm-12 py-3">
+        <div class="">
+          <div class="card-header text-center">
+            <h4>Add Restaurants </h4>
+        
+          </div>
+          <div class="card-body">
+            <form   [formGroup]="addForm" >
+              <div class="row">
+
+
+
+                 <mat-form-field class="example-full-width form-group col-sm-12 col-md-6"  appearance="fill">
+                  <label class="">Name<label class="red-text">*</label></label>
+                
+                 
+                  <div class="input-group ">
+                      <input type="text" matInput formControlName="name" 
+                      placeholder="Enter Name" class="border form-control">
+                  </div>
+               
+                </mat-form-field><br />
+
+                <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 " appearance="fill">
+        
+                  <label class="">Area<label class="red-text">*</label></label>
+                  <div class="input-group  ">
+                  <input type="text" matInput formControlName="area" 
+                         placeholder="Enter Area" class="border form-control">
+                  </div>
+                
+               
+                </mat-form-field><br />
+                <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 " appearance="fill">
+        
+                    <label class="">Address<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="address" 
+                           placeholder="Enter Address" class="border form-control">
+                    </div>
+                  
+                 
+                  </mat-form-field><br />
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 " appearance="fill">
+        
+                    <label class="">Type<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="type" 
+                           placeholder="Enter Type" class="border form-control">
+                    </div>
+                  
+                 
+                  </mat-form-field><br />
+
+                  <mat-form-field appearance="fill" class="form-group col-sm-12 col-md-12 mt-3">
+                    <label class="">Description<label class="red-text">*</label></label>
+            
+                    <div class="input-group  ">
+                        <input type="text" matInput formControlName="description" 
+                               placeholder="Enter Description" class="border form-control">
+                        </div>
+                 
+                  </mat-form-field><br />
+
+                <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                  <label class="">About<label class="red-text">*</label></label>
+                  <div class="input-group  ">
+                  <input type="text" matInput formControlName="about"
+                         placeholder="Enter About info" class="border form-control">
+                  </div>
+                
+                </mat-form-field><br />
+
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                    <label class="">Phone<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="phone"
+                           placeholder="Enter your phone" class="border form-control">
+                    </div>
+             
+                  </mat-form-field><br />
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                    <label class="">hours<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="hours"
+                           placeholder="Enter Hours of Working" class="border form-control">
+                    </div>
+             
+                  </mat-form-field><br />
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                    <label class="">Services<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="services"
+                           placeholder="Enter Your Services" class="border form-control">
+                    </div>
+             
+                  </mat-form-field><br />
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                    <label class="">Rating<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="number" matInput formControlName="rating"
+                           placeholder="Enter your Rating" class="border form-control">
+                    </div>
+             
+                  </mat-form-field><br />
+                  <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+                    <label class="">Image<label class="red-text">*</label></label>
+                    <div class="input-group  ">
+                    <input type="text" matInput formControlName="Image"
+                           placeholder="Enter Name of Image" class="border form-control">
+                    </div>
+             
+                  </mat-form-field><br />
+         
+  
+              <br /><br />
+               
+                <div class="d-grid gap-2 col-sm-12 mt-5">
+                  <button class="btn btn-outline-danger  btn-block" (click)="onSubmit()"  type="submit"><i aria-hidden="true"></i>
+                   Submit</button>
+                  </div>
+              </div>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div> 

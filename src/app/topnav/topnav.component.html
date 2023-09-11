@@ -1,0 +1,26 @@
+<div class="container-fluid top">
+    <div class="d-flex justify-content-between flex-sm-column flex-md-row w-100 ">
+      <span class="order-0 mt-2">
+        <p>Phone: +961 01 111222 </p>
+      </span>
+      <span class="d-block order-1">
+       <!-- <span class="mx-2">
+          <select #currencySelect (change)="selectCurrency(currencySelect.value)">
+            <option *ngFor="let _curr of currency" [value]="_curr.id_currency">{{_curr.iso_code}}</option>
+            
+          </select>
+        </span> -->
+        
+        <span class="_sign_in mx-2">
+          <span  class="order-1"><a
+            routerLink="/customer/register" *ngIf="loginbtn">Sign In   </a> </span>
+              <span  class="order-1"><a
+                routerLink="" *ngIf="logoutbtn" (click)="logout()">logout  </a> </span>
+         
+        </span>
+  
+  
+  
+      </span>
+  
+    </div>

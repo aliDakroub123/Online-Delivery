@@ -1,0 +1,41 @@
+
+<!-- Default form contact -->
+<form class="text-start border border-light p-5"  [formGroup]="addForm">
+    <p class="h4 mb-4">Contact us</p>
+    <!-- Name -->
+    <mat-form-field class="example-full-width form-group col-sm-12 col-md-6"  appearance="fill">
+      <label class="">Username<label class="red-text">*</label></label>
+    
+     
+      <div class="input-group ">
+          <input type="text" matInput formControlName="username" 
+          placeholder="Enter Username" class="border form-control">
+      </div>
+   
+    </mat-form-field><br />
+    <mat-form-field class="example-full-width form-group col-sm-12 col-md-6"  appearance="fill">
+      <label class="">Subject<label class="red-text">*</label></label>
+    
+     
+      <div class="input-group ">
+          <input type="text" matInput formControlName="subject" 
+          placeholder="Enter Subject" class="border form-control">
+      </div>
+   
+    </mat-form-field><br />
+    <mat-form-field class="example-full-width form-group col-sm-12 col-md-6"  appearance="fill">
+      <label class="">Message<label class="red-text">*</label></label>
+    
+     
+      <div class="input-group ">
+          <input type="text" matInput formControlName="content" 
+          placeholder="Enter Message" class="border form-control">
+      </div>
+   
+    </mat-form-field><br />
+    
+    <!-- Send button -->
+    <button    class=" my-4 btn btn-danger"
+       type="submit" (click)="onSubmit()">Send</button>
+  </form>
+  <!-- Default form contact -->

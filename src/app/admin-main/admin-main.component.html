@@ -1,0 +1,154 @@
+
+
+<!-- 
+<div class="topnav shadow p-1 navbar " data-toggle="collapse" data-target=".navbar-collapse.show">
+    <a>Admin Dashboard</a>
+    
+        <span class="menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidebar"><i class="bi bi-list"></i></span>
+     
+
+    </div> 
+
+
+<div  class="sidebar shadow p-2 collapse-horizontal navbar-collapse"  id="sidebar"   >
+    <ul class="" >
+        <li><a routerLink=""><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+  
+        <li>
+            <a href=""><i class="bi bi-bag"></i> Users <i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a routerLink="/admin/main/users">View Users</a></li>
+                
+            </ul>
+        </li>
+        <li>
+            <a href=""><i class="bi bi-tag"></i> Restaurants <i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a href="">All Restaurants</a></li>
+                <li><a href="">Add Restaurants</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href=""><i class="bi bi-tag"></i> Categories<i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a href="">Categories</a></li>
+                <li><a href="">Add Categories</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href=""><i class="bi bi-tag"></i> Orders<i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a href="">All Restaurants</a></li>
+                <li><a href="">Add Restaurants</a></li>
+            </ul>
+        </li>
+       
+        <li>
+            <a href=""><i class="bi bi-tag"></i> Admin Users<i class="bi bi-arrow-right icon"></i></a>
+            <ul class="dropdow-container">
+                <li><a href="">Admins</a></li>
+                <li><a href="">Add Admin</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href=""><i class="bi bi-tag"></i>Messages <i class="bi bi-arrow-right icon"></i></a>
+            
+        </li>
+       
+        <li><a routerLink="" (click)="logouttt()" ><i class="bi bi-box-arrow-left"  ></i> Logout</a></li>
+
+
+
+    </ul>
+   
+</div> 
+
+-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-4 fixed-top" style="height: 100px;">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/admin/main"><i class="bi bi-house-door mx-3"></i>Admin Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+          <div class="d-flex">
+          
+          <!--<button type="button" class="btn  px-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+            <i class="bi bi-text-left"></i>
+          </button>-->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header ">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Admin Dashboard</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>-->
+   
+    <div  class="sidebar shadow p-2 collapse-horizontal navbar-collapse mt-4"  id="sidebar"   >
+        <ul class="" >
+            <li><a routerLink="/admin/main"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+      
+            <li>
+                <a href=""><i class="bi bi-bag"></i> Users <i class="bi bi-arrow-right icon"></i></a>
+                <ul class="dropdow-container">
+                    <li><a routerLink="/admin/main/users">View Users</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href=""><i class="bi bi-tag"></i> Restaurants <i class="bi bi-arrow-right icon"></i></a>
+                <ul class="dropdow-container">
+                    <li><a href="/admin/main/restaurants">All Restaurants</a></li>
+                    <li><a href="/admin/main/add">Add Restaurants</a></li>
+                </ul>
+            </li>
+          
+            <li>
+                <a routerLink="/admin/main/orders"><i class="bi bi-tag"></i> Orders<i class="bi bi-arrow-right icon"></i></a>
+             
+            </li>
+           
+            <li>
+                <a href=""><i class="bi bi-tag"></i> Admin Users<i class="bi bi-arrow-right icon"></i></a>
+                <ul class="dropdow-container">
+                  
+                    <li><a routerLink="/admin/main/admins">Add Admin</a></li>
+                </ul>
+            </li>
+            <li>
+                <a routerLink="/admin/main/messages"><i class="bi bi-tag"></i>Messages <i class="bi bi-arrow-right icon"></i></a>
+                
+            </li>
+           
+            <li><a routerLink=""  (click)="logouttt()" ><i class="bi bi-box-arrow-left"  ></i> Logout</a></li>
+    
+    
+    
+        </ul>
+       
+    </div> 
+    
+<router-outlet></router-outlet>
+   <!-- MAIN -->
+ 
+
+  
+<!--<div >
+
+<app-top-header (sideNavToggled)="sideNavStatus=$event;">
+  
+</app-top-header>
+  
+   <main>
+    <app-side-nav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open':sideNavStatus}" class="bg-light ">
+
+    </app-side-nav>
+    
+   </main>
+   
+</div>-->

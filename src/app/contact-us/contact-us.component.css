@@ -1,0 +1,13 @@
+.input-group{
+    height: 40px;
+   
+}
+.input-group input{
+    padding: 5px;
+}
+.red-text{
+    color:red
+}
+label{
+    font-weight: bold;
+}

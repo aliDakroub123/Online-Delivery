@@ -1,0 +1,36 @@
+<div  class="mt-5 ms-5">
+    <div>
+        <h1>My Orders</h1>
+    </div>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Username</th>
+            <th scope="col">Address</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Total</th>
+            <th scope="col">Restaurant</th>
+            <th scope="col"></th>
+           
+          </tr>
+        </thead>
+        <tbody *ngIf="order">
+          <tr *ngFor="let o of order ">
+            <th scope="row">{{o.id}}</th>
+            <td>{{o.f_name}}</td>
+            <td>{{o.l_name}}</td>
+            <td>{{o.username}}</td>
+            <td>{{o.address}}</td>
+            <td>{{o.phone}}</td>
+            <td>{{o.total }}</td>
+            <td>{{o.r_name}}</td>
+            <td><button class="btn btn-success">Details</button></td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+

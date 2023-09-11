@@ -1,0 +1,99 @@
+<div class="container-fluid">
+  <div class="row row-cols-2">
+    <div class="col col-12 col-md-6 col-lg-6" *ngIf="_visible">
+      <app-signup></app-signup>
+    </div>
+
+    <div class="col column1 col-12 col-md-6 col-lg-6" *ngIf="!_visible" style="margin-bottom: 20px;">
+      <div class="column1-wrapper hero-image">
+       
+
+       <h1>welcome</h1>
+        <p>Access more customer features.</p>
+         
+          <div class="">
+            <a class="btn btn-outline-warning " (click)="TogglePage('register')">Register</a>
+          </div>
+      
+    </div>
+  </div> 
+    <div class="col col-12 col-md-6 col-lg-6" *ngIf="!_visible">
+
+      <div class="card-wrapper m-5 mt-3 ">
+        <div class=" text-center">
+          <h4>Sign In</h4>
+          <p>Enter your login credentials</p>
+          
+          
+        </div>
+        <div class="card-body">
+          <form action="" [formGroup]="angForm" (ngSubmit)="postdata(angForm)"> 
+            <div class="form-group">
+              <label for="">Email<label class="red-text">*</label></label>
+              <div class="input-group mb-2">
+                <input type="email" class="form-control" id="email" name="email" formControlName="email"
+                  placeholder="Enter your email">
+                <!--Validation-->
+                <!--<div *ngIf="submitted && f.email.errors" class="alert alert-danger">
+              </div>
+              <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger validation">
+                <div class="alertMsg" *ngIf="f.email.errors.required">
+                  {{'LOGIN.EmailRequired' | translate}}
+                </div>
+                <div class="alertMsg" *ngIf="f.email.errors.pattern">
+                  {{'LOGIN.InvalidEmail' | translate}}
+                </div>
+              </div>-->
+            </div>
+    
+            <div class="form-group">
+              <label for="">Password<label class="red-text">*</label></label>
+              <div class="input-group mb-2">
+    
+                <input [type]="fieldTextType ? 'text' : 'password'"  class="form-control" id="password" name="password"
+                  formControlName="password" placeholder="Enter your password">
+                
+    
+              </div>
+            
+            </div>
+            <!--div class="form-group mr-auto">
+                    <label for="">Remember me<label class="red-text">*</label></label>
+                    <div class="input-group mb-2">
+                      <input type="checkbox" class="form-control"  id="remember-me" name=""
+                        >
+                      </div>
+                    </div>-->
+            <div class="links d-flex justify-content-between flex-sm-column w-100">
+              <div class="remember order-0 ">
+                <label for="" class="">Remember me</label>
+                <input type="checkbox" name="" id="" class="">
+              </div>
+              <div class=" order-1 pb-2">
+                <a class="forgot" routerLink="/customer/forgot-password">forgot your password? </a>
+              
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+            <button class="btn btn-outline-dark btn-block" type="submit"><i aria-hidden="true"></i>
+             Sign In </button>
+            </div>
+            <!--<a  class="text-center "><i class="fa fa-google" aria-hidden="true"></i>
+              {{'LOGIN.Google' | translate}}</a>-->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col column2 col-12 col-md-6 col-lg-6" *ngIf="_visible" style="margin-bottom: 20px;">
+      <div class=" column2-wrapper hero-image2">
+        <h1 class="text-dark">Welcome Back!</h1>
+        <p class="text-dark">Kindly sign in to access your customer features.</p>
+        
+          <button class="btn btn-outline-danger " type="button"(click)="TogglePage('login')">sign in</button>
+        
+    </div>
+
+  </div>
+</div>

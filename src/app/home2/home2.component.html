@@ -1,0 +1,70 @@
+<div class="container-fluid services">
+    <div class="row">
+      <div class="">
+        <!--Featured restaurants section-->
+        <div class="row featured-section">
+          <!-- <div class="col-sm-12 nav-tabs">
+                 <button class="btn btn-outline-secondary">Restaurants</button>
+                 <button class="btn btn-outline-secondary">Menu</button>
+              </div>-->
+  
+       <!--Restaurants section-->
+       <div class="restaurant-list">
+        <div class="row ">
+
+          <div class="col-sm-12 res-headings">
+            <h2>CHOOSE YOUR TASTE</h2>
+            <h1>RESTAURANTS</h1>
+          </div>
+
+
+         
+          <div class="w-100  col-sm-12 row" >
+            <div class=" col-sm-12 col-md-6 col-xl-3 restaurant" *ngFor="let r of Restaurants,let i =index" >
+              <div *ngIf="i<=3">
+              <div class=" badge"><span class="badge badge-danger">new</span></div>
+              <img src="../../assets/img/restaurants/{{r.image}}" alt="">
+              <h3>{{r.name}}</h3>
+              <p>{{r.description}}</p>
+            </div>
+            </div>
+          </div>
+         
+         
+        </div>
+      </div>
+    </div>
+      <!-- End Restaurants section-->
+<div class="all" style="text-align: center;">
+  <a class="btn btn-danger" routerLink="/restaurants" >View all Restaurants</a> 
+</div>
+    
+    
+        <!--Customer assurance section-->
+        <div class="row assurance-statement">
+          <div class="col-sm-3">
+            <img src="../../assets/img/icons/icon1.png" alt="">
+            <h3>Better quality</h3>
+            <p>We have the best restaurants in your area and top quality.</p>
+          </div>
+          <div class="col-sm-3">
+            <img src="../../assets/img/icons/icon2.png" alt="">
+            <h3>On time</h3>
+            <p>We deliver your food as fast as we can and on time.</p>
+          </div>
+          <div class="col-sm-3">
+            <img src="../../assets/img/icons/icon3.png" alt="">
+            <h3>Masterchefs</h3>
+            <p>Our restaurants have the best chefs in country.</p>
+          </div>
+          <div class="col-sm-3">
+            <img src="../../assets/img/icons/icon4.png" alt="">
+            <h3>Tasty food</h3>
+            <p>We deliver a tasty and delicious food only.</p>
+          </div>
+        </div>
+        <!--End of Customer assurance section-->
+      
+    </div>
+  </div>
+</div>

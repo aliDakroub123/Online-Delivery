@@ -1,0 +1,52 @@
+
+nav{
+    background-color: white !important;
+    box-shadow: 1px 1px 15px black;
+}
+.navbar {
+  position: relative;
+  width: 100%;
+}
+
+.navbar-brand {
+    display: inline-block;
+
+    margin-left: 1.2rem;
+    margin-right: 3rem;
+    font-size: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
+  .navbar .navbar-brand img {
+width: 160px;
+    margin-left: -30px;
+    height: 40px !important;
+    background-color: white;
+  }
+ .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #202020;
+  }
+  .navbar-nav > li > a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #202020;
+  }
+  .navbar-nav > li > a:hover {
+    color: #f0002f;
+  }
+  
+  .navbar-nav > li > a:active {
+    color: #f0002f;
+  }
+  
+  .nav-links {
+    cursor: pointer;
+  }
+  
+  .acc {
+    margin-left: 60px;
+   
+  
+  }

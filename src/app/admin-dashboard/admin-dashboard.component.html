@@ -1,0 +1,88 @@
+
+<div style="margin-left:300px ;" class="mt-5">
+  <main  class="mt-5">
+    <div class="head-title">
+      <div class="left">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">Dashboard</a>
+          </li>
+          <li><i class="bi bi-chevron-right"></i></li>
+          <li>
+            <a class="active" href="#">Home</a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="btn-download">
+        <i class='bi bi-cloud-download' ></i>
+        <span class="text">Download PDF</span>
+      </a>
+    </div>
+    <ul class="box-info">
+      <li >
+        <i class="bi bi-calendar-check-fill"></i>
+        <span class="text" *ngIf="orders">
+          <h3>{{orders.length}}</h3>
+          <p>Total Order</p>
+        </span>
+      </li>
+      <li >
+        <i class="bi bi-people-fill" ></i>
+        <span class="text" *ngIf="user">
+          <div  >
+          <h3 >{{user.length}}</h3>
+          <p>Users</p>
+        </div>
+        </span>
+      </li>
+      
+      <li *ngIf="restaurants">
+        <i class="bi bi-building-check"></i>
+        <span class="text">
+          <h3>{{restaurants.length}}</h3>
+          <p>Total Restaurants</p>
+        </span>
+      </li>
+    </ul>
+  
+  </main>
+  <div>
+      <h1>Orders</h1>
+  </div>
+  <table class="table" *ngIf="orders">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Username</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Total</th>
+          <th scope="col">Restaurant</th>
+          <th scope="col"></th>
+         
+        </tr>
+      </thead>
+      
+      <tbody *ngFor="let order of orders.reverse(),let i =index" >
+        <tr  *ngIf="i<7">
+          
+          <th scope="row">{{order.id}}</th>
+          <td>{{order.f_name}}</td>
+          <td>{{order.l_name}}</td>
+          <td>{{order.username}}</td>
+          <td>{{order.address}}</td>
+          <td>{{order.phone}}</td>
+          <td>{{order.total }}</td>
+          <td>{{order.r_name}}</td>
+          <td><button class="btn btn-danger" (click)="deleteOrder(order)">Delete</button></td>
+       
+        </tr>
+      
+      </tbody>
+    
+    </table>
+  </div>
+  

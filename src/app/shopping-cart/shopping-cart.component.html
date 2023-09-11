@@ -1,0 +1,155 @@
+<!--<div class="box box-solid">
+    <div class="box-header">
+      <i class="fa fa-shopping-cart"></i>
+  
+      <h3 class="box-title">Cart Delivery</h3>
+    </div>
+ 
+    <div class="box-body">
+      <div *ngIf="!items().length">
+         <p class="text-center">Empty shopping cart</p>
+      </div>
+      <div class="table-responsive" *ngIf="items().length">
+          <table class="table">
+            <tbody>
+            <tr *ngFor="let item of items()">
+              <th>({{item.quantity}}x) {{item.menuItem.name}}</th>
+              <td class="text-right">{{item.value() | currency: 'BRL': true}}</td>
+              <td class="text-right">
+                <a (click)="removeItem(item)" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <th>Total:</th>
+  
+              <td class="text-right">{{total() | currency: 'BRL': true}}</td>
+            </tr>
+          </tbody></table>
+        </div>
+    </div>
+    <div class="box-footer" *ngIf="items().length">
+      <div class="pull-right">
+        <button (click)="clear()" type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Clear</button>
+        <a routerLink="/order" class="btn btn-success"><i class="fa fa-credit-card"></i> Close Order</a>
+      </div>
+    </div>
+  </div>-->
+
+   
+  
+
+  <div class="container">
+   
+          <div  *ngIf="!cartItems.length" class="mt-5">
+            <div class="modal-dialog " >
+              <div class="modal-content">
+               
+                <div class="modal-body">
+                  <div class="no-item w-100 d-flex justify-content-center align-items-center flex-column" >
+                    <span><img src="../../assets/img/nothing_to_see.png" alt="" class="nothing-img"></span>
+                     <span class="nothing-top-text mt-2 font-weight-bold">Nothing to see here</span>
+                     <span class="nothing-top-text mt-2 ">Add items to your cart and then find them here.</span>
+                     <span class="nothing-small-text"></span>
+                    <span><button class="btn btn-outline-danger border-radius-5 mt-2 mb-5" routerLink="/restaurants">View Restaurants</button></span>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                 
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+    <div class="row" *ngIf="cartItems.length">
+      <div class="col-sm-12 text-center my-5">
+        <!--When the cart is empty-->
+       
+        <!--When the cart is not empty-->
+        <ng-container >
+          <div class="row">
+            <div class="col-sm-8 ">
+              <h1>
+                Shopping Cart
+              </h1>
+              <p class="fw-bold">You Have <label class="text-danger">{{cartItems.length}}</label> items in your cart</p>
+            </div>
+              <div class="col-sm-2 ">
+              <button class="btn btn-danger  " (click)="clearCart()" ><i class="fa fa-home"></i>Clear Cart</button>
+              </div>
+              <div *ngIf="user.length" class="col-sm-2">
+                <div *ngFor="let u of user">
+                  <h2>Hi {{u.f_name}}</h2>
+                </div>
+              </div>
+          
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <table class="table">
+  
+                <thead class="table-dark">
+                  <tr class="text-center">
+                    <th>Image </th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>SubTotal</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of cartItems;let index=index">
+                    <td class="d-flex  justify-content-around">
+                      <img src=" {{item.image}}" alt="" width="60" height="60px" class="order-1">
+                      <span  class="text-danger mr-md-4" style="cursor:pointer" (click)="deleteItem(index)"><i class="bi bi-trash3-fill"
+                         ></i></span>
+                         
+                    </td>
+                    <td>
+                      <p>{{item.name}}</p>
+                    </td>
+                    <td>
+                      
+                      <p>{{item.price|currency:'$':true}}</p>
+                    </td>
+                    <td  >
+                      <button class="btn btn-dark" (click)="minusamount(index)">-</button>
+                      <input type="number" class="form-control-sm w-25" (change)="detectChange()" [(ngModel)]="item.quantity">
+                      <button class="btn btn-dark"(click)="addamount(index)">+</button>
+                    </td>
+  
+                    <td>
+                     {{item.price * item.quantity  | currency:'$':true}} 
+                    </td>
+                    
+                  </tr>
+  
+                  <tr class="border-0 _bottom">
+                    <td ></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <td>{{total  | currency:'$':true}}</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+  
+              </table>
+  
+            </div>
+  
+            <div class="col-sm-12 d-flex md-5 nav-btn">
+              <div class="d-flex justify-content-between flex-sm-column flex-md-row w-100 ">
+                <button class="btn btn-dark btn-sm order-0" routerLink="/restaurants"><i class="fa fa-home"></i> Continue</button>
+
+                <button class="btn btn-danger btn-sm order-1 "*ngIf="order" routerLink="/checkout">Check Out <i class="fa fa-arrow-circle-right"></i></button>
+                <button class="btn btn-danger btn-sm order-1 "*ngIf="loginbtn" routerLink="/customer/login" >login <i class="fa fa-arrow-circle-right"></i></button>
+                   
+              </div>
+  
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,129 @@
+<p>test works!</p>
+<!--<div class="container">
+    <div class="row">
+      <div class="col-sm-12 py-3">
+        <div class="">
+          <div class="card-header text-center">
+            <h4>Create Account</h4>
+        
+          </div>
+          <div class="card-body">
+<form [formGroup]="myForm" >
+<div class="row">
+    <mat-form-field class="example-full-width form-group col-sm-12 col-md-6"  appearance="fill">
+        <label class="">First Name<label class="red-text">*</label></label>
+      
+       
+        <div class="input-group ">
+            <input type="text" matInput formControlName="f_name" 
+            placeholder="Enter first name" class="border form-control">
+        </div>
+        <mat-error class="red-text" *ngIf="myForm.get('f_name').hasError('required')" >
+          name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field><br />
+
+      <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 " appearance="fill">
+        
+        <label class="">Last Name<label class="red-text">*</label></label>
+        <div class="input-group  ">
+        <input type="email" matInput formControlName="l_name" 
+               placeholder="Enter Last name" class="border form-control">
+        </div>
+      
+        <mat-error class="red-text" *ngIf="myForm.get('l_name').hasError('required')">
+          name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field><br />
+
+
+    <mat-form-field appearance="fill" class="form-group col-sm-12 col-md-12 mt-3">
+        <label class="">Email<label class="red-text">*</label></label>
+
+        <div class="input-group  ">
+            <input type="email" matInput formControlName="email" 
+                   placeholder="Ex. name@example.com" class="border form-control">
+            </div>
+      <mat-error class="red-text" *ngIf="myForm.get('email').hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+          <mat-error class="red-text" *ngIf="myForm.get('email').hasError('email')">
+            Please enter a valid email address
+          </mat-error>  
+      </mat-form-field><br />
+
+
+
+      <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+        <label class="">Username<label class="red-text">*</label></label>
+        <div class="input-group  ">
+        <input type="name" matInput formControlName="username"
+               placeholder="Enter Username" class="border form-control">
+        </div>
+        <mat-error class="red-text" *ngIf="myForm.get('username').hasError('minlength')">
+            Min length<strong>8 char</strong>
+        </mat-error>
+        <mat-error class="red-text" *ngIf="myForm.get('username').hasError('required')">
+            Username is <strong>required</strong>
+        </mat-error> 
+      </mat-form-field><br />
+
+      <mat-form-field class="example-full-width form-group col-sm-12 col-md-6 mt-2" appearance="fill">
+        <label class="">Phone<label class="red-text">*</label></label>
+        <div class="input-group  ">
+        <input type="name" matInput formControlName="phone"
+               placeholder="Enter your phone" class="border form-control">
+        </div>
+      
+       <mat-error  class="red-text" *ngIf="myForm.get('phone').hasError('required')">
+            Phone is <strong>required</strong>
+        </mat-error>
+      </mat-form-field><br />
+
+      <mat-form-field class="example-full-width form-group col-sm-12 col-md-12 mt-2" appearance="fill">
+        <label class="">Address<label class="red-text">*</label></label>
+        <div class="input-group  ">
+        <input type="address" matInput formControlName="address"
+               placeholder="Enter your Address" class="border form-control">
+        </div>
+   
+        <mat-error  class="red-text" *ngIf="myForm.get('address').hasError('required')">
+            Address is <strong>required</strong>
+        </mat-error>
+      </mat-form-field><br />
+
+      
+
+      <mat-form-field appearance="fill" class="form-group col-sm-12 col-md-6 mt-2 mb-2">
+        <label class="">Password<label class="red-text">*</label></label>
+        <div class="input-group  ">
+        <input type="password" matInput formControlName="password"
+        placeholder="Enter Password" class="border form-control">
+        </div>
+        <mat-error  class="red-text"  *ngIf="myForm.get('password').hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+        <mat-error  class="red-text" *ngIf="myForm.get('password').hasError('minlength')">
+          Min length <strong>8 char</strong>
+        </mat-error>      
+      </mat-form-field><br /><br />
+    
+      <div mat-dialog-actions class="d-grid gap-2 col-sm-12 mt-5">
+        <button type="submit" (click)="onSubmit()" mat-raised-button color="primary" class="btn btn-outline-danger  btn-block">Submit</button>
+      </div>
+    </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+</div> -->
+
+
+<div class="col-md-9 col-xs-12">
+  <app-test2 *ngFor="let items of menu | async" 
+  [items]="items"
+ ></app-test2> 
+  <!-- $event is an object passed as parameter-->
+</div>

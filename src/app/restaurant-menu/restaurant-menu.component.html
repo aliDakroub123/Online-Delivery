@@ -1,0 +1,306 @@
+<div class="ms-3 mx-auto" *ngIf="Restaurants">
+    <p class="text-sm font-light text-gray-600 py-4">
+      Home / Lebanon  {{ Restaurants.city }} / {{ Restaurants.area }} /
+      <strong class=" text-gray-800 ">{{ Restaurants.name }}</strong>
+    </p>
+    <section>
+      <div class="banner">
+        <div class="img_col_1 mx-4 ms-4">
+          <div class=" _img1 ">
+            <img
+              class="__img1 rounded-3"
+              src="../../assets/img/restaurants/{{Restaurants.image}}"
+              alt=""
+            />
+          </div>
+        </div>
+        <!--<div class="img_col_2 d-flex flex-column justify-content-between mx-1">
+          <div class="img2_1 ">
+            <img
+              class="rounded-md"
+              src="https://b.zmtcdn.com/data/reviews_photos/bab/850fabeb79ff3e60fefb67c52c8a8bab_1552909678.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+              alt=""
+            />
+          </div>
+          <div class="img2_2">
+            <img
+              class="rounded-md"
+              src="https://b.zmtcdn.com/data/reviews_photos/32a/0e3b105450312008e507da24e416d32a_1544272487.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="img_col_3 d-flex flex-column justify-content-between mx-1">
+          <div class="img2_1">
+            <img
+              class="rounded-md"
+              src="https://b.zmtcdn.com/data/reviews_photos/bab/850fabeb79ff3e60fefb67c52c8a8bab_1552909678.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+              alt=""
+            />
+          </div>
+          <div class="img2_2">
+            <img
+              class="rounded-md"
+              src="https://b.zmtcdn.com/data/reviews_photos/32a/0e3b105450312008e507da24e416d32a_1544272487.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A"
+              alt=""
+            />
+          </div>
+        </div>-->
+      </div>
+    </section>
+  
+    <section class="details px-1 pt-2">
+      <div class="d-flex justify-content-between">
+        <div class="details-text ms-4">
+          <h1 class="text-3xl fw-bolder" >{{ Restaurants.name }}</h1>
+          
+          <p class="text-gray-700" style=" line-height: 19px !important;">
+            {{ Restaurants.about }} 
+            
+          </p>
+          <p class="text-gray-600 text-lg">{{ Restaurants.area }}</p>
+          <p class="text-red-600     text-md">
+            Open Now-
+            <span class="text-gray-800 pt-2" style=" line-height: 19px !important;">
+               {{ Restaurants.hours}}
+            </span>
+          </p>
+        </div>
+        
+        <div class=" text-end ">
+          <button class="btn btn-outline-danger d-flex flex-row rounded-3 mx-4 ">
+              <h6 class="mx-2 mt-1"> {{Restaurants.rating}} </h6>
+            <i class="bi bi-star-fill"></i></button>
+          
+        </div>
+      </div>
+
+      <div class="py-4">
+        <ul class="d-flex ">
+          <li
+            class="bg-red-500 text-md px-3 text-white py-2 cursor-pointer mr-1 rounded-md hover:list"
+          >
+          🎀 Add Review
+          </li>
+          <li
+            class="border-red-500  text-md px-3 py-2 cursor-pointer  mx-1 rounded-md hover:list"
+          >
+            🚀 Direction
+          </li>
+          <li
+            class="border-red-500  text-md px-3 py-2 cursor-pointer  mx-1 rounded-md hover:list" 
+          >
+            📌 Bookmark
+          </li>
+          <li
+            class="border-red-500 text-md px-3 py-2 cursor-pointer  mx-1 rounded-md hover:list"
+          >
+            ✋ Share
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class=" ml-3 w-100">
+        <section>
+          <div class="px-4 py-4">
+            <mat-tab-group >
+              <mat-tab label="Overview">
+                    <div class="container">
+                        <h3 class=" mt-5">About this place</h3>
+                       <!-- <p class="mt-5 ml-1 shadow1">Menus 🍽</p>
+                        <div class="my-4 p-2 inline-block rounded bg-gray-100 shadow2 overflow-hidden">
+                          <img
+                            class="rounded block hover:cursor-pointer menuImg "
+                            src="../../assets/img/imgg/food1.jpg"
+                            alt="" />
+                        </div> -->
+                        <div class="pt-2">
+                          <p class="text-xl bg-red-100 py-1 px-2 rounded inline-block fw-bold">
+                            {{ Restaurants.type }}
+                          </p>
+                          <br />
+                          <div class="mt-0">
+                            <span
+                              class="mx-1 rounded-full text-center border-gray-200 text-red-800  py-1 px-2"
+                              
+                              >{{Restaurants.description}}</span
+                            >
+                          </div>
+                        </div>
+                        <p
+                          class="my-4 text-sm bg-green-100 p-2 rounded hover:shadow-sm cursor-pointer inline-block"
+                        >
+                        We have voted 1701 votes by people
+                        </p>
+                        <!--<div *ngFor="let item of menu">
+                            <p> {{item.name}}</p>
+                           <p>{{item.price}}</p>
+                           <ng-template></ng-template>
+                          </div>-->
+                        <div class="my-4 w-64 p-4 shadow3">
+                          <div class="">
+                            <p class="text-gray-800">Call:</p>
+                            <p class="text-red-700"> {{Restaurants.phone}}</p>
+                           
+                          </div>
+                      <div>
+                        <p class="text-gray-800 mt-4"> View the Directions of our Restaurants:</p>
+                      </div>
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3336.004719007295!2d35.201506175389646!3d33.266368773463036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151e7d82448c5ba5%3A0xdafe118cf8bea7e5!2sAljawad%20Restaurant%20Alramel%20Branch!5e0!3m2!1sen!2sus!4v1683292560078!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                      <p class="fw-bolder mt-3 mb-2">{{Restaurants.address}} </p>
+                          <div class="mt-4">
+                            <span class=" border-red-400 px-2 py-1 rounded-2"
+                              >✔ Copy</span
+                            >
+                            <span
+                              class=" border-red-400 ms-1 px-2 py-1 rounded-2"
+                              >🛴 Directions</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+              </mat-tab>
+              <mat-tab label="Order Online">
+                  <!--  <h3 class="tit text-center" style="margin-bottom: 1em;">Menu list</h3>--> 
+                   <!--  <h3 class="tit text-center" style="margin-bottom: 1em;">Menu list</h3>--> 
+ <div class="container-fluid mt-2 w-100" >
+  <div class="row">
+    <!--<div class="col-md-2 d-none d-lg-block text-left">
+     
+      <div class="  pl-4 pr-20 w-64 bg-gray-100 rounded-md">
+          <ul>
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer fw-bold">
+              Bestsellers
+            </li>
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer">
+              Restaurant Recommendation
+            </li>
+            
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Food</li>
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Beverages</li>
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Desserts</li>
+            <li class="py-3 px-4 hover:text-red-600 cursor-pointer">Tobacco</li>
+          </ul>
+        </div>
+    </div>-->
+    
+    <div class="col-md-12 text-left ">
+
+
+      <div class="">
+          <div class="d-flex w-100 flex-wrap flex-row justify-content-start">
+            <div class="ms-5 d-flex flex-column flex-wrap ">
+              <div class="text-2xl ">Order Online</div>
+              <div class="d-flex flex-wrap flex-row">
+                <div
+                  class="text-start  text-gray-600 text-sm "
+                >
+                  🕑 Live track your order clock
+                </div>
+                <div class="text-start ms-2 ">|</div>
+                <div class="text-start ms-2 text-gray-500 ">
+                  42 mins
+                </div>
+              </div>
+            </div>
+
+            <div class="ms-5 text-end">
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-danger" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+
+
+          <div class="mt-4">
+              <div class="p-2 text-white bg-google-blue rounded-2 ">
+                <div class="ml-3 font-sans ">
+                  🏁 Delivering food to
+                  <span class="fw-bold ">{{Restaurants.area}} and around</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mt-4 mb-4">
+              <div class="d-flex flex-row flex-wrap justify-content-evenly">
+                <button class="rounded-2 border-red-400 mt-1">
+                  <div class="text-center   ">
+                    <div class="d-flex flex-row flex-wrap justify-content-between">
+                      <div class="  text-red-500 m-1 ">
+                        <div>40% OFF</div>
+                      </div>
+                      <div
+                        class=" text-center p-1 bg-gray-100 text-xs ml-4"
+                      >
+                        ordering more than<br />
+                         10 times/month
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button class="rounded-2 border-red-400 mt-1">
+                  <div class="text-center ">
+                    <div class="d-flex flex-row flex-wrap justify-content-between">
+                      <div class="  text-red-500 m-1 ">
+                        <div>10% OFF</div>
+                      </div>
+                      <div
+                        class="text-center p-1 bg-gray-100 text-xs ml-4"
+                      >
+                        On orders <br />
+                        worth 50$ and ...
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button class="rounded-2 border-red-400 mt-1">
+                  <div class="text-center  ">
+                    <div class="d-flex flex-row flex-wrap justify-content-between">
+                      <div class=" text-red-500 m-1 ">
+                        <div>30% Off</div>
+                      </div>
+                      <div
+                        class="m-auto text-center p-1 bg-gray-100 text-xs ml-4"
+                      >
+                      On orders <br />
+                      worth 100$ and ...
+                      </div>
+                    </div>
+                  </div>
+                </button>
+               
+              </div>
+            </div>
+
+<div >
+            <app-food-items></app-food-items>
+</div>
+
+          </div>
+      
+    </div>
+  </div>
+</div>
+
+              </mat-tab>
+              <mat-tab label="Reviews" >
+              </mat-tab>
+              <mat-tab label="News">
+              </mat-tab>
+              <mat-tab label="Events">
+              </mat-tab>
+             </mat-tab-group>
+            
+            
+          </div>
+        </section>
+    </div>
+ 
+    
+
+
+ 

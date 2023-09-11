@@ -1,0 +1,71 @@
+
+
+.hero-image {
+   background-image:url("../../assets/img/customer-login.png"); /* The image used */
+    /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    background-color: #e30026;
+   
+  }
+  .column1{
+
+    height: 528px;
+   justify-content: center;
+   text-align: center;
+    margin-top: 20px;
+}
+
+
+.column1-wrapper h1{
+    color:white;
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing: 0.5em;
+    padding-top: 150px;
+}
+
+.column1-wrapper p{
+    color:white;
+    
+}
+.forgot{
+text-decoration: none;
+
+}
+
+.hero-image2 {
+    background-image:url("../../assets/img/customer-login.png"); /* The image used */
+     /* Used if the image is unavailable */
+     height: 500px; /* You must set a specified height */
+     background-position: center; /* Center the image */
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /* Resize the background image to cover the entire container */
+ 
+     background-color: #e3b200;
+    
+   }
+   .column2{
+
+    height: 528px;
+   justify-content: center;
+   text-align: center;
+    margin-top: 20px;
+}
+
+
+.column2-wrapper h1{
+    color:white;
+    text-transform:uppercase;
+    font-weight:600;
+    letter-spacing: 0.5em;
+    padding-top: 150px;
+}
+
+.column2-wrapper p{
+    color:white;
+    
+}

@@ -1,0 +1,138 @@
+<div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h1>Checkout</h1>
+    </div>
+      <div class="col-sm-7 mt-5">
+        <div class="text-start">
+          <h2>Order Details</h2>
+      </div>
+            <form [formGroup]="checkoutForm" >
+
+              <div class="row">
+               <div class="form-group col-sm-12">
+                  <div class="input-group mb-3">
+             
+                      <input type="text" class="form-control" formControlName="f_name" name="f_name" id="f_name" placeholder="First Name">
+                      <input type="text" class="form-control" formControlName="l_name" name="l_name" id="l_name" placeholder="Last Name">
+                    </div>
+                  </div>
+    
+                  <div class="form-group col-sm-12">
+                    <div class="input-group mb-3">
+                     
+                      <input type="text" class="form-control" formControlName="username" name="username" id="username" placeholder="Username">
+                      
+                    </div>
+                  </div>
+    
+                  <div class="form-group col-sm-12 ">
+                    
+                    <div class="input-group mb-3">
+                      
+                      <input type="text" class="form-control" formControlName="phone" name="phone" id="phone" placeholder="Phone">
+                      
+                    </div>
+                  </div>
+    
+                  <div class="form-group col-sm-12 ">
+                    <div class="input-group mb-3">
+                   
+                      <input type="text" class="form-control" formControlName="address" name="address" id="address" placeholder="Delivery Address">
+                    </div>
+                  </div>
+                 
+                  
+                <div class="form-group col-sm-12 ">
+                    <div class="input-group mb-3">
+                   
+                      <input type="text" class="form-control" formControlName="details" name="details" id="details" placeholder="details">
+                    </div>
+                  </div>
+
+           
+                  <div class="form-group col-sm-12 " *ngFor="let item of cartItems,let first = first">
+                    <div class="input-group mb-3" *ngIf="first">
+                  
+                      <input type="text" [(ngModel)]="item.restaurantId" formControlName="r_name" class="form-control">
+                   
+                  </div>
+                  </div>
+                  <div class="form-group col-sm-12 " >
+                    <div class="input-group mb-3" >
+                  <p>Price: {{this.price}} </p><br>
+                  
+                   <!--   <input type="text" [(ngModel)]="this.price" formControlName="total" class="form-control">--> 
+                   
+                  </div>
+                  
+                  </div>
+             
+  
+                <div class="col-sm-12">
+                    <button (click)="addCart()" type="submit" class="btn btn-dark mb-3">order </button>
+                </div>
+              </div>
+             
+            </form>
+     
+      
+        
+            <div class="alert alert-success" role="alert" *ngIf="success"> <strong>Well done</strong>Your Order Placed Successfully </div>
+         
+      </div>
+      
+
+<div class="col-sm-4 mt-5">
+  <div class="text-start">
+    <h2>Your order</h2>
+</div>
+
+      <div class=" p-3  border-light rounded bg-light border border-secondary">
+        <h5 class="font-weight-bold"></h5>
+      
+        <div class="col-sm-12 text-center"  *ngIf="cartItems.length">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Product/s</th>
+                <th>Total</th>
+              </tr>
+  
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartItems">
+                <td class="">
+              {{item.quantity}} x {{item.name}}
+                </td>
+                <td>
+                  {{item.quantity*item.price | currency:'$'}}
+                </td>
+  
+              </tr>
+              <tr>
+                <td>Delivery </td>
+                <td>{{this.cost|currency:'$'}}</td>
+              </tr>
+              <tr>
+                <td class="total-hd">Total</td>
+                <td class="total-qty">{{this.total+this.cost|currency:'$'}}</td>
+              </tr>
+  
+            </tbody>
+          </table>
+  
+          <!-- Form starts -->
+       
+  
+        </div>
+  
+  
+      </div>
+
+
+
+
+    </div>
+    </div>
+  </div>

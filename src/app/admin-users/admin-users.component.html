@@ -1,0 +1,35 @@
+
+<div style="margin-left:300px ;margin-top: 120px;" class="">
+    <div>
+        <h1>Users</h1>
+    </div>
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Orders</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users">
+            <th scope="row">{{u.id}}</th>
+            <td>{{u.f_name}}</td>
+            <td>{{u.l_name}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.address}}</td>
+            <td><button class="btn btn-primary" routerLink="admin/main/order/{{u.username}}" (click)="selectOrder(u.username)">View Orders</button></td>
+            <td><button class="btn btn-danger" (click)="deleteUser(u)">Delete</button></td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
